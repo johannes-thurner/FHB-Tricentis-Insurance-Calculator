@@ -62,10 +62,15 @@ describe("Insurance Calculator Android: End to End", () => {
         // TODO - Insert values in person data page
 
         // Navigate to person data page
-        //primaryNavigation.personDataNavButton.click();
-        //const personDataPage = new PersonDataPage(driver);
-        //await personDataPage.init();
-
+        primaryNavigation.personDataNavButton.click();
+        const personDataPage = new PersonDataPage(driver);
+        await personDataPage.init();
+        
+        await personDataPage.firstName.setValue("Johannes");
+        await personDataPage.lastName.setValue("Thurner");
+        await personDataPage.dateOfBirth.setValue("26.08.1997");
+        await personDataPage.genderMale.click();
+        
     });
 
 
@@ -97,8 +102,19 @@ describe("Insurance Calculator Android: End to End", () => {
 
         // Validate quote
         await expect(quotePage.automobileLiability).toHaveText("319.66");
+        await expect(quotePage.premiumTax).toHaveText("1920.00");
+        await expect(quotePage.offerSummary).toHaveText("2239.66");
 
         // TODO - Add validation for premiumTax and offer Summary
+        /*
+        automobileLiability
+        premiumTax
+        offerSummary
+        */
+        /*
+        await productDetailsPage.automobileLiability.setValue("Yearly");
+        await productDetailsPage.premiumTax.setValue("Yearly");
+            */
 
     });
 });
