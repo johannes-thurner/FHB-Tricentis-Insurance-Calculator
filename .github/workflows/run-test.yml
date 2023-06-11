@@ -30,7 +30,9 @@ jobs:
         run: npm ci
 
       - name: Start Appium Inspector
-        run: npm install -g appium
+        run: |
+          npm install -g appium
+          appium &
 
       - name: Run tests
         run: npm test
