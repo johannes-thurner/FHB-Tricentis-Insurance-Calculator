@@ -1,4 +1,4 @@
-name: run-test
+name: build-and-archive-angular-app
 on:
   push:
     branches:
@@ -32,5 +32,4 @@ jobs:
           appium &
 
       - name: Run tests
-        run: |
-          cd "$(pwd)" ; node_modules/.bin/wdio ./src/config/cloud/wdio.android.app.conf.js --suite mobileAndroid
+        run: npm test:local
