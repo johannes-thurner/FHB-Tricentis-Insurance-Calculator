@@ -32,4 +32,4 @@ jobs:
           appium &
 
       - name: Run tests
-        run: npm test:local
+        run: npm test
