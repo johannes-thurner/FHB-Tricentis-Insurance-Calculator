@@ -198,3 +198,5 @@ You should get successful runs for both.
 * https://appium.github.io/appium-xcuitest-driver/4.16/capabilities/
 * https://webdriver.io/docs/selectors/
 * https://w3c.github.io/webdriver/#capabilities
+
+## Automated Testing
