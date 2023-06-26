@@ -200,4 +200,10 @@ You should get successful runs for both.
 * https://w3c.github.io/webdriver/#capabilities
 
 ## Automated Testing
-### This is the final test 
+## Aufgabenstellung:
+
+Fertigstellung der Automatisierung:
+Vehicle Data
+Person Data
+Product Details
+Quote
